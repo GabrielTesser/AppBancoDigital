@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.Login">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Color="#3400E6" Offset="0.3" />
+            <GradientStop Color="#FF0062" Offset="1.3" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame CornerRadius="5" HorizontalOptions="Center" Margin="20" >
+                <Label Text="BANK" TextColor="Black" FontSize="30" FontAttributes="Bold"/>
+            </Frame>
+
+            <Frame CornerRadius="5" Margin="10" Padding="10" VerticalOptions="EndAndExpand">
+                <StackLayout VerticalOptions="CenterAndExpand">
+                    <Label Text="Login:" TextColor="Black" VerticalOptions="StartAndExpand"/>
+
+                    <Entry x:Name="txt_cpf" Placeholder="CPF" PlaceholderColor="Black"/>
+                    <Entry x:Name="txt_senha" Placeholder="Senha" PlaceholderColor="Black"/>
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Logar" Clicked="Button_Clicked" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" Margin="0,50,0,10" CornerRadius="5" BackgroundColor="White" />
+
+            <StackLayout Margin="20" VerticalOptions="EndAndExpand">
+                <Label Text="Não possui uma conta?" TextColor="White" HorizontalOptions="Center"/>
+                <Button Text="Criar" HorizontalOptions="Center" TextColor="White" Clicked="Button_Clicked_1" BackgroundColor="Transparent"/>
+            </StackLayout>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

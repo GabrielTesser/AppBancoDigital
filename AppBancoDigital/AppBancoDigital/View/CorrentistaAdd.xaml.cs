@@ -20,7 +20,7 @@ namespace AppBancoDigital.View
             InitializeComponent();
         }
 
-        private async void ToolbarItem_Clicked(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
             act_carregando.IsRunning = true;
             act_carregando.IsVisible = true;
@@ -42,14 +42,17 @@ namespace AppBancoDigital.View
             catch (Exception ex)
             {
                 await DisplayAlert("Ops", ex.Message, "OK");
-
             }
             finally
             {
                 act_carregando.IsRunning = false;
                 act_carregando.IsVisible = false;
-
             }
+        }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new View.Login());
         }
     }
 }
