@@ -18,6 +18,7 @@ namespace AppBancoDigital.View
         public CorrentistaAdd()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="AppBancoDigital.View.Home">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Color="#3400E6" Offset="0.3" />
+            <GradientStop Color="#FF0062" Offset="1.3" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame Margin="10" CornerRadius="10" HeightRequest="10000" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+                <StackLayout SafeAreaEffect.SafeArea="true">
+                    <Label Text="Bem Vindo!" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>
+                   
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

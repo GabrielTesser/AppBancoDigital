@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="AppBancoDigital.View.CorrentistaAdd">
 
 
@@ -27,14 +28,21 @@
                     <Label Text="Cadastrar:" TextColor="Black" Margin="0, 20, 0, 20"/>
 
                     <Entry x:Name="txt_nome" Placeholder="Nome:" PlaceholderColor="Black"/>
-                    <Entry x:Name="txt_cpf" Placeholder="CPF" PlaceholderColor="Black"/>
+                    <Entry x:Name="txt_cpf" Placeholder="CPF" PlaceholderColor="Black">
+                        <Entry.Behaviors>
+                            <xct:MaskedBehavior 
+                                 Mask="AAA.AAA.AAA-AA" 
+                                 UnMaskedCharacter="A"
+                            />
+                        </Entry.Behaviors>
+                    </Entry>
                     <Entry x:Name="txt_senha" Placeholder="Senha" PlaceholderColor="Black"/>
                     <Label Text="Data de Nascimento" TextColor="Black"/>
                     <DatePicker x:Name="dtpck_data_nasc" Margin="0, 0, 0, 20" />
                 </StackLayout>
             </Frame>
 
-            <Button Text="Cadatrar" Margin="0,50,0,10" Clicked="Button_Clicked" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" Margin="10" CornerRadius="5" BackgroundColor="White" />
+            <Button Text="Cadatrar" Margin="0,50,0,10" Clicked="Button_Clicked" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" CornerRadius="5" BackgroundColor="White" />
 
             <StackLayout Margin="20" VerticalOptions="EndAndExpand">
                 <Label Text="Ja possui uma conta?" TextColor="White" HorizontalOptions="Center"/>

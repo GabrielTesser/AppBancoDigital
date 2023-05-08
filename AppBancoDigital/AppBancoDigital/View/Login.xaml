@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="AppBancoDigital.View.Login">
 
     <ContentPage.Background>
@@ -21,8 +22,16 @@
                 <StackLayout VerticalOptions="CenterAndExpand">
                     <Label Text="Login:" TextColor="Black" VerticalOptions="StartAndExpand"/>
 
-                    <Entry x:Name="txt_cpf" Placeholder="CPF" PlaceholderColor="Black"/>
-                    <Entry x:Name="txt_senha" Placeholder="Senha" PlaceholderColor="Black"/>
+                    <Entry x:Name="txt_cpf" Placeholder="CPF" PlaceholderColor="Black">
+                        <Entry.Behaviors>
+                            <xct:MaskedBehavior 
+                                 Mask="AAA.AAA.AAA-AA" 
+                                 UnMaskedCharacter="A"
+                            />
+                        </Entry.Behaviors>
+                    </Entry>
+
+                    <Entry x:Name="txt_senha" Placeholder="Senha" PlaceholderColor="Black" IsPassword="True"/>
                 </StackLayout>
             </Frame>
 
