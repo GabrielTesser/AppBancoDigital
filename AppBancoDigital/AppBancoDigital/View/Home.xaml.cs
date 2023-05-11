@@ -18,7 +18,6 @@ namespace AppBancoDigital.View
         public Home()
         {
             InitializeComponent();
-            SafeAreaEffect.SetSafeArea(stackLayout, new SafeArea(true));
 
         }
 

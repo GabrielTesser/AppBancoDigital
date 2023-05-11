@@ -15,9 +15,12 @@
         <StackLayout>
 
             <Frame Margin="10" CornerRadius="10" HeightRequest="10000" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                <StackLayout SafeAreaEffect.SafeArea="true">
+                <StackLayout >
                     <Label Text="Bem Vindo!" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>
-                   
+                    <Button Text="Efetuar Transação" VerticalOptions="CenterAndExpand" WidthRequest="100" CornerRadius="10" 
+                            BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"/>
+                    <Button Text="Receber Transação" VerticalOptions="StartAndExpand" WidthRequest="100" CornerRadius="10"
+                            BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"/>
                 </StackLayout>
             </Frame>
             

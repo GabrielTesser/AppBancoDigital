@@ -11,6 +11,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="imagens\aberto.png" />
+    <None Remove="imagens\fechado.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="imagens\aberto.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imagens\fechado.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.6" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
