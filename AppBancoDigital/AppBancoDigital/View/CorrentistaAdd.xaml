@@ -36,7 +36,10 @@
                             />
                         </Entry.Behaviors>
                     </Entry>
-                    <Entry x:Name="txt_senha" Placeholder="Senha" PlaceholderColor="Black"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry x:Name="txt_senha" Placeholder="Senha" PlaceholderColor="Black" WidthRequest="305" IsPassword="True"/>
+                        <ImageButton x:Name="btn_olho" Clicked="btn_olho_Clicked" BackgroundColor="Transparent"/>
+                    </StackLayout>
                     <Label Text="Data de Nascimento" TextColor="Black"/>
                     <DatePicker x:Name="dtpck_data_nasc" Margin="0, 0, 0, 20" />
                 </StackLayout>

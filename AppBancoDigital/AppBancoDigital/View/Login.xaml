@@ -33,7 +33,7 @@
 
 
                     <StackLayout Orientation="Horizontal">
-                        <Entry x:Name="txt_senha" Placeholder="Senha" PlaceholderColor="Black" WidthRequest="300" IsPassword="True"/>
+                        <Entry x:Name="txt_senha" Placeholder="Senha" PlaceholderColor="Black" WidthRequest="305" IsPassword="True"/>
                         <ImageButton x:Name="btn_olho" Clicked="Button_Clicked_2" BackgroundColor="Transparent"/>
                     </StackLayout>
 

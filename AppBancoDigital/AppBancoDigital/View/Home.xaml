@@ -14,12 +14,20 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Frame Margin="10" CornerRadius="10" HeightRequest="10000" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
+            <Frame Margin="10" CornerRadius="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                 <StackLayout >
+                    
                     <Label Text="Bem Vindo!" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>
-                    <Button Text="Efetuar Transação" VerticalOptions="CenterAndExpand" WidthRequest="100" CornerRadius="10" 
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Seu Estrato é de: R$ 0,00" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Subtitle" Margin="0, 50"/>
+                    </StackLayout>
+
+                    <Line Stroke="black" />
+
+                    <Button Text="Efetuar Transação" VerticalOptions="Center" CornerRadius="10" 
                             BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"/>
-                    <Button Text="Receber Transação" VerticalOptions="StartAndExpand" WidthRequest="100" CornerRadius="10"
+                    <Button Text="Receber Transação" VerticalOptions="Center" CornerRadius="10"
                             BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"/>
                 </StackLayout>
             </Frame>
