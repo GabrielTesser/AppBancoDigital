@@ -8,14 +8,6 @@ namespace AppBancoDigital.Service
 {
     public class DataServiceCorrentista : DataService
     {
-        public static async Task<List<Correntista>> GetCorrentistaAsync()
-        {
-            string json = await DataService.GetDataFromService("/correntista");
-
-            List<Correntista> arr_correntista = JsonConvert.DeserializeObject<List<Correntista>>(json);
-
-            return arr_correntista;
-        }
         public static async Task<Correntista> Cadastrar(Correntista c)
         {
             var json_a_enviar = JsonConvert.SerializeObject(c);
@@ -26,25 +18,20 @@ namespace AppBancoDigital.Service
 
             return p;
         }
-        public static async Task<List<Correntista>> SearchAsync(string q)
+        public static async Task<Correntista> Autorizar(Correntista c)
         {
-            var json_a_enviar = JsonConvert.SerializeObject(q);
+            var json_to_send = JsonConvert.SerializeObject(c);
 
-            string json = await DataService.PostDataToService(json_a_enviar, "/correntista/buscar");
+            string json = await DataService.GetDataFromService(String.Format("/correntista/entrar?cpf={0}&senha={1}", c.Cpf, c.Senha));
 
-            List<Correntista> arr_correntista = JsonConvert.DeserializeObject<List<Correntista>>(json);
+            Correntista correntista = new Correntista();
+            if (json != "false")
+            {
+                correntista = JsonConvert.DeserializeObject<Correntista>(json);
+            }
 
-            return arr_correntista;
-        }
-        public static async Task<List<Correntista>> DeleteAsync(int id)
-        {
-            var json_a_enviar = JsonConvert.SerializeObject(id);
 
-            string json = await DataService.PostDataToService(json_a_enviar, "/pessoa/delete");
-
-            List<Correntista> arr_correntista = JsonConvert.DeserializeObject<List<Correntista>>(json);
-
-            return arr_correntista;
+            return correntista;
         }
 
 

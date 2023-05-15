@@ -45,7 +45,9 @@
                 </StackLayout>
             </Frame>
 
-            <Button Text="Cadatrar" Margin="0,50,0,10" Clicked="Button_Clicked" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" CornerRadius="5" BackgroundColor="White" />
+            <Button Text="Cadatrar" Margin="0,50,0,10" Clicked="Button_Clicked" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" CornerRadius="5" BackgroundColor="Transparent" TextColor="White" BorderColor="White" BorderWidth="3"
+                    xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
 
             <StackLayout Margin="20" VerticalOptions="EndAndExpand">
                 <Label Text="Ja possui uma conta?" TextColor="White" HorizontalOptions="Center"/>
