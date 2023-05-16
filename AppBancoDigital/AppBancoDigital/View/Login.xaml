@@ -13,9 +13,11 @@
 
     <ContentPage.Content>
         <StackLayout>
+            
+           
 
-            <Frame CornerRadius="5" HorizontalOptions="Center" Margin="20" >
-                <Label Text="BANK" TextColor="Black" FontSize="30" FontAttributes="Bold"/>
+            <Frame WidthRequest="150" Padding="0, 0, 0, -5" BackgroundColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="5">
+                <Image x:Name="Logo" Scale="2"/>
             </Frame>
 
             <Frame CornerRadius="5" Margin="10" Padding="10" VerticalOptions="EndAndExpand">
@@ -42,13 +44,12 @@
 
             <Button Text="Logar" Clicked="Button_Clicked" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" Margin="0,50,0,10" CornerRadius="5" BorderColor="White" TextColor="White" BorderWidth="3"
                     xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
 
             <StackLayout Margin="20" VerticalOptions="EndAndExpand">
                 <Label Text="Não possui uma conta?" TextColor="White" HorizontalOptions="Center"/>
                 <Button Text="Criar" HorizontalOptions="Center" TextColor="White" Clicked="Button_Clicked_1" BackgroundColor="Transparent"/>
             </StackLayout>
-
 
         </StackLayout>
     </ContentPage.Content>

@@ -23,6 +23,9 @@ namespace AppBancoDigital.View
 
             PropriedadesApp = (App)Application.Current;
             btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
+            Logo.Source = ImageSource.FromResource("AppBancoDigital.imagens.GT.png");
+
+
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

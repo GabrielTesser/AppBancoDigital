@@ -15,6 +15,7 @@ namespace AppBancoDigital.View
         public Enviar()
         {
             InitializeComponent();
+
         }
 
         private void Button_Clicked(object sender, EventArgs e)

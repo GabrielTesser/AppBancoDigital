@@ -13,6 +13,7 @@
   <ItemGroup>
     <None Remove="imagens\aberto.png" />
     <None Remove="imagens\fechado.png" />
+    <None Remove="imagens\GT.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +21,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="imagens\fechado.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imagens\GT.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
