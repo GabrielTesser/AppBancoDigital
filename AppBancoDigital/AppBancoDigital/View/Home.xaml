@@ -34,7 +34,7 @@
 
 
 
-                    <Button Text="Receber Transação" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked_1"
+                    <Button Text="Gerar QR" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked_1"
                             BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent" 
                             xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                             xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>

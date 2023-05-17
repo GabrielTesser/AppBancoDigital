@@ -17,15 +17,14 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Frame BorderColor="White" Margin="30" CornerRadius="5" HorizontalOptions="Center">
-                <Label Text="BANK" FontSize="30" TextColor="Black" HorizontalOptions="Center" FontAttributes="Bold"/>
-            </Frame>
-            
+            <Image x:Name="Logo" Scale="2" Margin="0, 80, 0, 0" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"
+                   xct:IconTintColorEffect.TintColor="Black"/>
+
             <ActivityIndicator x:Name="act_carregando" IsVisible="False" IsRunning="False" />
 
-            <Frame Margin="10" CornerRadius="5" Padding="10">
+            <Frame Margin="0, 5, 0, -10" CornerRadius="5" Padding="10" Scale="0.9">
                 <StackLayout>
-                    <Label Text="Cadastrar:" TextColor="Black" Margin="0, 20, 0, 20"/>
+                    <Label Text="Cadastrar:" TextColor="Black" Margin="0, 20, 0, 20" FontSize="Title" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
 
                     <Entry x:Name="txt_nome" Placeholder="Nome:" PlaceholderColor="Black"/>
                     <Entry x:Name="txt_cpf" Placeholder="CPF" PlaceholderColor="Black">
@@ -45,13 +44,13 @@
                 </StackLayout>
             </Frame>
 
-            <Button Text="Cadatrar" Margin="0,50,0,10" Clicked="Button_Clicked" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" CornerRadius="5" BackgroundColor="Transparent" TextColor="White" BorderColor="White" BorderWidth="3"
+            <Button Text="Cadatrar" Margin="0,20,0,10" Clicked="Button_Clicked" HorizontalOptions="Center" FontSize="15" FontAttributes="Bold" CornerRadius="5" BackgroundColor="Transparent" TextColor="White" BorderColor="White" BorderWidth="3"
                     xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                             xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
 
             <StackLayout Margin="20" VerticalOptions="EndAndExpand">
                 <Label Text="Ja possui uma conta?" TextColor="White" HorizontalOptions="Center"/>
-                <Button Text="Logar" HorizontalOptions="Center" Clicked="Button_Clicked_1" TextColor="White" BackgroundColor="Transparent"/>
+                <Button Text="Logar" HorizontalOptions="Center" Clicked="Button_Clicked_1" TextColor="White" BackgroundColor="Transparent" Margin="-10"/>
             </StackLayout>
             
         </StackLayout>

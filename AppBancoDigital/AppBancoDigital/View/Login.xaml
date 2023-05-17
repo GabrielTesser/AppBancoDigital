@@ -13,16 +13,14 @@
 
     <ContentPage.Content>
         <StackLayout>
-            
-           
 
-            <Frame WidthRequest="150" Padding="0, 0, 0, -5" BackgroundColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" CornerRadius="5">
-                <Image x:Name="Logo" Scale="2"/>
-            </Frame>
+            <Image x:Name="Logo" Scale="2" Margin="0, 100, 0, -100" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"
+                   xct:IconTintColorEffect.TintColor="Black"/>
 
             <Frame CornerRadius="5" Margin="10" Padding="10" VerticalOptions="EndAndExpand">
                 <StackLayout VerticalOptions="CenterAndExpand">
-                    <Label Text="Login:" TextColor="Black" VerticalOptions="StartAndExpand"/>
+                    
+                    <Label Text="Login:" TextColor="Black" VerticalOptions="StartAndExpand" FontSize="Title" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
 
                     <Entry x:Name="txt_cpf" Placeholder="CPF" PlaceholderColor="Black">
                         <Entry.Behaviors>

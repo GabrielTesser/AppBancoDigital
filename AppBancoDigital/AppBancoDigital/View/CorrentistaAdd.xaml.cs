@@ -20,6 +20,8 @@ namespace AppBancoDigital.View
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
+            Logo.Source = ImageSource.FromResource("AppBancoDigital.imagens.GT.png");
+
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

@@ -18,13 +18,16 @@
             <Frame CornerRadius="10" VerticalOptions="StartAndExpand" WidthRequest="50" Scale="0.9" >
                 <StackLayout>
                     <Label Text="Efetuar Transação" FontSize="Title" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center"/>
-                    <Entry Placeholder="Informe a Chave Pix" PlaceholderColor="Black" Margin="0, 20, 0, 20"/>
+
+                    <Entry Placeholder="Valor a ser enviado" PlaceholderColor="Black" Margin="0, 20, 0, 0"/>
+
+                    <Entry Placeholder="Informe a Chave Pix" PlaceholderColor="Black"/>
 
                     <Button VerticalOptions="CenterAndExpand" Text="Efetuar" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="5" CornerRadius="10" TextColor="Black"
                             xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                             xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
 
-                    <Button VerticalOptions="CenterAndExpand" Text="Escanear QR" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="5" CornerRadius="10" TextColor="Black" Margin="0,-50,0,0"
+                    <Button VerticalOptions="CenterAndExpand" Text="Escanear QR" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="5" CornerRadius="10" TextColor="Black" Margin="0,-80,0,0"
                              xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                              xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
 
