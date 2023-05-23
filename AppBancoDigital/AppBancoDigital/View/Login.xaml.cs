@@ -1,5 +1,6 @@
 ﻿using AppBancoDigital.Model;
 using AppBancoDigital.Service;
+using AppBancoDigital.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,28 +33,24 @@ namespace AppBancoDigital.View
         {
             //try
             //{
-            //    Console.WriteLine(txt_cpf.Text);
-            //    Correntista c = await DataServiceCorrentista.Autorizar(new Correntista
+            //    Model.Correntista c = await DataServiceCorrentista.Entrar(new Model.Correntista
             //    {
-            //        Senha = txt_cpf.Text,
-            //        Cpf = txt_cpf.Text
+            //        Senha = txt_senha.Text,
+            //        Cpf = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty)
             //    });
 
-            //    if (c.Id != 0)
+            //    if (c.Id != null)
             //    {
-            //        string msg = $"Correntista logado com sucesso. Código gerado: {c.Id} ";
 
-            //        await DisplayAlert("Sucesso!", msg, "OK");
+            //        App.DadosCorrentista = c;
 
-            //        await Navigation.PushAsync(new View.Home());
+            //        await Navigation.PushAsync(new Home());
             //    }
             //    else
             //    {
-            //        string msg = $"Correntista não encontrado, tente logar novamente! ";
+            //        string msg = $"Algo deu errado, tente logar novamente!";
 
             //        await DisplayAlert("Erro!", msg, "OK");
-
-            //        await Navigation.PushAsync(new View.Login());
             //    }
 
             //}
@@ -61,7 +58,6 @@ namespace AppBancoDigital.View
             //{
             //    await DisplayAlert("Ops", ex.Message, "OK");
             //}
-
 
 
 

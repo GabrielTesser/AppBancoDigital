@@ -26,7 +26,7 @@
 
 
                     <Frame Scale="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Black" CornerRadius="10" HeightRequest="25" WidthRequest="25">
-                        <Label Text="QR Muito legal" TextColor="White" FontSize="Subtitle" />
+                        <Label Text="QR" TextColor="White" FontSize="Subtitle" />
                     </Frame>
                     
                 </StackLayout>

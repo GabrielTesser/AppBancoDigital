@@ -14,11 +14,19 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Frame Margin="10" CornerRadius="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                <StackLayout >
-                    
-                    <Label Text="Bem Vindo!" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>
+            <Frame HasShadow="True" Margin="10" CornerRadius="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
 
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                        <GradientStop Color="LightGray" Offset="0.3" />
+                        <GradientStop Color="White" Offset="1.3" />
+                    </LinearGradientBrush>
+                </Frame.Background>
+                
+                <StackLayout >
+
+                    <Label Text="Bem Vindo!" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>
+                        
                     <Line X1="360" Stroke="black" VerticalOptions="Center" Margin="0, 15, 0, 0"/>
 
                     <StackLayout Orientation="Horizontal">
@@ -26,7 +34,7 @@
                     </StackLayout>
 
                     <Line X1="360" Stroke="black" VerticalOptions="Center"/>
-
+                    
                     <Button Text="Efetuar Transação" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked"
                             BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"
                             xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
