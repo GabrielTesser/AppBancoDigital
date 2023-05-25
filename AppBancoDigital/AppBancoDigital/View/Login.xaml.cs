@@ -31,49 +31,43 @@ namespace AppBancoDigital.View
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    Model.Correntista c = await DataServiceCorrentista.Entrar(new Model.Correntista
-            //    {
-            //        Senha = txt_senha.Text,
-            //        Cpf = txt_cpf.Text.Replace(".", string.Empty).Replace("-", string.Empty)
-            //    });
-
-            //    if (c.Id != null)
-            //    {
-
-            //        App.DadosCorrentista = c;
-
-            //        await Navigation.PushAsync(new Home());
-            //    }
-            //    else
-            //    {
-            //        string msg = $"Algo deu errado, tente logar novamente!";
-
-            //        await DisplayAlert("Erro!", msg, "OK");
-            //    }
-
-            //}
-            //catch (Exception ex)
-            //{
-            //    await DisplayAlert("Ops", ex.Message, "OK");
-            //}
-
-
-
-            string usuario = txt_cpf.Text;
-            string senha = txt_senha.Text;
-
-            string usuario_correto = "111.111.111-11";
-            string senha_correta = "123";
-
-            if (usuario == usuario_correto && senha == senha_correta)
+            try
             {
-                //App.Current.Properties.Add("usuario_logado", usuario);
-                App.Current.MainPage = new Home();
+                Model.Correntista c = await DataServiceCorrentista.LoginAsync(new Model.Correntista
+                {
+                    Cpf = txt_cpf.Text,
+                    Senha = txt_senha.Text,
+                });
+
+                if (c.Id != null)
+                {
+                    App.DadosCorrentista = c;
+                    App.Current.MainPage = new NavigationPage(new View.Home());
+                }
+                else
+                    throw new Exception("Dados de login inválidos.");
+
             }
-            else
-                await DisplayAlert("ops!", "usuario ou senha incorreto.", "OK");
+            catch (Exception ex)
+            {
+                await DisplayAlert("Ops!", ex.Message, "OK");
+            }
+
+
+
+            //string usuario = txt_cpf.Text;
+            //string senha = txt_senha.Text;
+
+            //string usuario_correto = "111.111.111-11";
+            //string senha_correta = "123";
+
+            //if (usuario == usuario_correto && senha == senha_correta)
+            //{
+            //    //App.Current.Properties.Add("usuario_logado", usuario);
+            //    App.Current.MainPage = new Home();
+            //}
+            //else
+            //    await DisplayAlert("ops!", "usuario ou senha incorreto.", "OK");
 
         }
 

@@ -26,34 +26,33 @@ namespace AppBancoDigital.View
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            act_carregando.IsRunning = true;
-            act_carregando.IsVisible = true;
-
             try
             {
-                Correntista c = await DataServiceCorrentista.Cadastrar(new Correntista
+                Model.Correntista c = await DataServiceCorrentista.SaveAsync(new Model.Correntista
                 {
                     Nome = txt_nome.Text,
+                    Email = txt_email.Text,
+                    Data_Nascimento = dtpck_data_nasc.Date,
+                    Cpf = txt_cpf.Text,
                     Senha = txt_senha.Text,
-                    Data_Nasc = dtpck_data_nasc.Date.ToString("yyyy-MM-dd"),
-                    Cpf = txt_cpf.Text
                 });
 
-                string msg = $"Correntista inserido com sucesso. Código gerado: {c.Id} ";
+                if (c.Id != null)
+                {
 
-                await DisplayAlert("Sucesso!", msg, "OK");
+                    App.DadosCorrentista = c;
 
-                await Navigation.PushAsync(new View.Login());
+                    await Navigation.PushAsync(new View.Home());
+                }
+                else
+                    throw new Exception("Ocorreu um erro ao salvar seu cadastro.");
             }
             catch (Exception ex)
             {
-                await DisplayAlert("Ops", ex.Message, "OK");
+                Console.WriteLine(ex.StackTrace);
+                await DisplayAlert("Ops!", ex.Message, "OK");
             }
-            finally
-            {
-                act_carregando.IsRunning = false;
-                act_carregando.IsVisible = false;
-            }
+
         }
 
         private void Button_Clicked_1(object sender, EventArgs e)

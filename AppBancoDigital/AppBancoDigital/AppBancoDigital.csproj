@@ -42,7 +42,7 @@
     <EmbeddedResource Update="View\CorrentistaEditar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Enviar.xaml">
+    <EmbeddedResource Update="View\Pix\Enviar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Home.xaml">
@@ -51,10 +51,10 @@
     <EmbeddedResource Update="View\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Reber.xaml">
+    <EmbeddedResource Update="View\Pix\Reber.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Sacanear.xaml">
+    <EmbeddedResource Update="View\Pix\Sacanear.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

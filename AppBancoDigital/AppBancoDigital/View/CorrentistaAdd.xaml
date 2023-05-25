@@ -27,6 +27,7 @@
                     <Label Text="Cadastrar:" TextColor="Black" Margin="0, 20, 0, 20" FontSize="Title" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
 
                     <Entry x:Name="txt_nome" Placeholder="Nome:" PlaceholderColor="Black"/>
+                    <Entry x:Name="txt_email" Placeholder="Email:" PlaceholderColor="Black"/>
                     <Entry x:Name="txt_cpf" Placeholder="CPF" PlaceholderColor="Black">
                         <Entry.Behaviors>
                             <xct:MaskedBehavior 
