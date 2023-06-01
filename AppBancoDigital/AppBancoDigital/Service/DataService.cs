@@ -8,7 +8,7 @@ namespace AppBancoDigital.Service
 {
     public class DataService
     {
-        private static readonly string servidor = "http://10.0.2.2:8000";
+        private static readonly string servidor = " http://10.0.2.2:8000";
 
         protected static async Task<string> GetDataFromService(string rota)
         {
