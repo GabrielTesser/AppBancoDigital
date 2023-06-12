@@ -15,14 +15,6 @@
         <StackLayout>
 
             <Frame HasShadow="True" Margin="10" CornerRadius="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-
-                <Frame.Background>
-                    <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                        <GradientStop Color="LightGray" Offset="0.3" />
-                        <GradientStop Color="White" Offset="1.3" />
-                    </LinearGradientBrush>
-                </Frame.Background>
-                
                 <StackLayout >
 
                     <Label Text="Bem Vindo!" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>

@@ -14,9 +14,9 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Image x:Name="Logo" Scale="2" Margin="0, 100, 0, -100" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"
-                   xct:IconTintColorEffect.TintColor="Black"/>
-
+                <Image x:Name="Logo" Scale="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                       xct:IconTintColorEffect.TintColor="Black"/>  
+            
             <Frame CornerRadius="5" Margin="10" Padding="10" VerticalOptions="EndAndExpand">
                 <StackLayout VerticalOptions="CenterAndExpand">
                     
