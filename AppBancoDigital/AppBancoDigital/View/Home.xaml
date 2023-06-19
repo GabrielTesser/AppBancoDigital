@@ -22,7 +22,7 @@
                     <Line X1="360" Stroke="black" VerticalOptions="Center" Margin="0, 15, 0, 0"/>
 
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Seu Estrato é de: R$ 0,00" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Title" Margin="0, 50"/>
+                        <Label Text="Seu saldo é de: R$ 0,00" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Title" Margin="0, 50"/>
                     </StackLayout>
 
                     <Line X1="360" Stroke="black" VerticalOptions="Center"/>
