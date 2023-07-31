@@ -12,12 +12,16 @@
 
   <ItemGroup>
     <None Remove="imagens\aberto.png" />
+    <None Remove="imagens\config.png" />
     <None Remove="imagens\fechado.png" />
     <None Remove="imagens\GT.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="imagens\aberto.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imagens\config.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="imagens\fechado.png">

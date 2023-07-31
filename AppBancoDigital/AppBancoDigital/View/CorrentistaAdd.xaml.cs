@@ -33,7 +33,7 @@ namespace AppBancoDigital.View
                     Nome = txt_nome.Text,
                     Email = txt_email.Text,
                     Data_Nascimento = dtpck_data_nasc.Date.ToString("yyyy-MM-dd"),
-                    Cpf = txt_cpf.Text.Trim(new Char[] { ' ', '-', '.' }),
+                    Cpf = txt_cpf.Text.Trim('-', ' ', '.'),
                     Senha = txt_senha.Text,
                 });
 

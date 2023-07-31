@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,11 @@ namespace AppBancoDigital.View
         public Home()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            string correntista = "Ola " + App.DadosCorrentista.Nome  + "!";
+            btn_config.Source = ImageSource.FromResource("AppBancoDigital.imagens.config.png");
+
+            txt_correntista.Text = correntista;
 
         }
 

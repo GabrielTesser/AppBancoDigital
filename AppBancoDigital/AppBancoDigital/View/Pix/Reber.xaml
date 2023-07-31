@@ -14,8 +14,10 @@
     <ContentPage.Content>
         <StackLayout >
 
-            <Button Text="⬅" Clicked="Button_Clicked" FontSize="30" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
-
+           
+            <Button Text="⬅" FontSize="30" TextColor="White" BackgroundColor="Transparent" Clicked="Button_Clicked" HorizontalOptions="Start" VerticalOptions="StartAndExpand"/>
+             
+            
             <Frame CornerRadius="10" VerticalOptions="StartAndExpand" WidthRequest="50" Scale="0.9">
                 <StackLayout>
 
