@@ -15,6 +15,19 @@ namespace AppBancoDigital.View
         public CorrentistaEditar()
         {
             InitializeComponent();
+
+            avatar.Source = ImageSource.FromResource("AppBancoDigital.imagens.avatar.png");
+            string correntista = "Nome: " + App.DadosCorrentista.Nome;
+            string cpf = "Nome: " + App.DadosCorrentista.Cpf;
+            string email = "Nome: " + App.DadosCorrentista.Email;
+
+            txt_correntista.Text = correntista;
+            txt_cpf.Text = cpf;
+            txt_email.Text = email;
+
+
+
+
         }
     }
 }

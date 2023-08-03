@@ -36,5 +36,10 @@ namespace AppBancoDigital.View
         {
             App.Current.MainPage = new Reber();
         }
+
+        private void btn_config_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new CorrentistaEditar();
+        }
     }
 }
