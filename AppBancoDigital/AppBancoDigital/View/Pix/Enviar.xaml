@@ -13,30 +13,20 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Button Text="⬅" TextColor="White" Clicked="Button_Clicked" FontSize="30" BackgroundColor="Transparent" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand"/>
+            <Button Text="⬅" FontSize="30" TextColor="White" BackgroundColor="Transparent" Clicked="Button_Clicked" HorizontalOptions="Start" VerticalOptions="StartAndExpand"/>
 
-            <Frame CornerRadius="10" VerticalOptions="StartAndExpand" WidthRequest="50" Scale="0.9" >
+
+            <Frame CornerRadius="10" VerticalOptions="StartAndExpand" WidthRequest="50" Scale="0.9">
                 <StackLayout>
-                    <Label Text="Efetuar Transação" FontSize="Title" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center"/>
 
-                    <Entry Placeholder="Valor a ser enviado" PlaceholderColor="Black" Margin="0, 20, 0, 0"/>
+                    <Frame Scale="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Black" CornerRadius="10" HeightRequest="100" WidthRequest="100">
+                        <Image Aspect="AspectFill" x:Name="img_qr"/>
+                    </Frame>
 
-                    <Entry Placeholder="Informe a Chave Pix" PlaceholderColor="Black"/>
-
-                    <Button VerticalOptions="CenterAndExpand" Text="Efetuar" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="5" CornerRadius="10" TextColor="Black"
-                            xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
-
-                    <Button VerticalOptions="CenterAndExpand" Text="Escanear QR" BackgroundColor="Transparent" BorderColor="Black" BorderWidth="5" CornerRadius="10" TextColor="Black" Margin="0,-80,0,0"
-                             xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                             xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
-
-
+                    <Button Clicked="Button_Clicked_1" BackgroundColor="Transparent" CornerRadius="10" BorderColor="Black" BorderWidth="3" Text="Gere seu QR" HorizontalOptions="CenterAndExpand" FontSize="Title" TextColor="Black" FontAttributes="Bold"/>
 
                 </StackLayout>
             </Frame>
-            
-            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

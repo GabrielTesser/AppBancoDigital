@@ -15,24 +15,7 @@
         <StackLayout >
 
            
-            <Button Text="⬅" FontSize="30" TextColor="White" BackgroundColor="Transparent" Clicked="Button_Clicked" HorizontalOptions="Start" VerticalOptions="StartAndExpand"/>
-             
             
-            <Frame CornerRadius="10" VerticalOptions="StartAndExpand" WidthRequest="50" Scale="0.9">
-                <StackLayout>
-
-                    <Label Text="Aqui esta seu QR" HorizontalOptions="CenterAndExpand" FontSize="Title" TextColor="Black" FontAttributes="Bold"/>
-
-                    <Image x:Name="qrCodeImage" Aspect="AspectFit"/>
-
-
-
-                    <Frame Scale="2" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Black" CornerRadius="10" HeightRequest="25" WidthRequest="25">
-                        <Label Text="QR" TextColor="White" FontSize="Subtitle" />
-                    </Frame>
-                    
-                </StackLayout>
-            </Frame>
             
         </StackLayout>
     </ContentPage.Content>
