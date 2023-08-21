@@ -18,7 +18,7 @@
 
             <Frame Margin="0, -350, 0, 0" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Gray" CornerRadius="100">
                 
-                <Image x:Name="avatar" xct:CornerRadiusEffect.CornerRadius="100" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" BackgroundColor="Gray"/>
+                <Image xct:CornerRadiusEffect.CornerRadius="100" x:Name="avatar" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" BackgroundColor="Gray"/>
 
             </Frame>
 
@@ -29,7 +29,7 @@
                     <Label FontSize="Medium" FontAttributes="Bold" Text="CPF: " TextColor="Black" x:Name="txt_cpf" VerticalOptions="Center" HorizontalOptions="Center"/>
                     <Label FontSize="Medium" FontAttributes="Bold" Text="Email: " TextColor="Black" x:Name="txt_email" VerticalOptions="Center" HorizontalOptions="Center"/>
 
-                    <Button Text="adicionar imagem" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked_2" 
+                    <Button Text="editar imagem" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked_2" 
                             BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"
                             xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                             xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>

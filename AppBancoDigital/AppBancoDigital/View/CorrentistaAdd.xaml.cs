@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.CommunityToolkit;
+
 
 
 namespace AppBancoDigital.View
@@ -15,13 +17,23 @@ namespace AppBancoDigital.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CorrentistaAdd : ContentPage
     {
+        bool Avatar;
+
         public CorrentistaAdd()
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
-            Logo.Source = ImageSource.FromResource("AppBancoDigital.imagens.GT.png");
 
+            if (Avatar == false)
+            {
+                avatar.Source = ImageSource.FromResource("AppBancoDigital.imagens.avatar.png");
+            }
+            else
+            {
+                avatar.Source = App.DadosCorrentista.SelectedImage;
+
+            }
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -71,6 +83,24 @@ namespace AppBancoDigital.View
             {
                 txt_senha.IsPassword = true;
                 btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
+            }
+        }
+
+        private async void Button_Clicked_2(object sender, EventArgs e)
+        {
+            var result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+            {
+                Title = "Selecione uma imagem"
+            });
+
+            if (result != null)
+            {
+
+                Avatar = true;
+
+                avatar.Source = ImageSource.FromFile(result.FullPath);
+                App.DadosCorrentista.SelectedImage = ImageSource.FromFile(result.FullPath);
+
             }
         }
     }

@@ -22,11 +22,13 @@ namespace AppBancoDigital.View
             if (Avatar == false)
             {
                 avatar.Source = ImageSource.FromResource("AppBancoDigital.imagens.avatar.png");
-                avatar.Scale = 1.5;
+                avatar.Aspect = Aspect.AspectFit;
+
             }
             else
             {
                 avatar.Source = App.DadosCorrentista.SelectedImage;
+                
             }
             string correntista = "Nome: " + App.DadosCorrentista.Nome;
             string cpf = "Nome: " + App.DadosCorrentista.Cpf;

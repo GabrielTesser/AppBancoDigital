@@ -17,8 +17,11 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Image x:Name="Logo" Scale="2" Margin="0, 80, 0, 0" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"
-                   xct:IconTintColorEffect.TintColor="Black"/>
+            <Frame Margin="0, 20, 0, 0" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" BackgroundColor="Gray" CornerRadius="100">
+
+                <Image x:Name="avatar" Aspect="AspectFill" HeightRequest="100" WidthRequest="100" BackgroundColor="Gray"/>
+
+            </Frame>
 
             <ActivityIndicator x:Name="act_carregando" IsVisible="False" IsRunning="False" />
 
@@ -43,6 +46,12 @@
                     </StackLayout>
                     <Label Text="Data de Nascimento" TextColor="Black"/>
                     <DatePicker x:Name="dtpck_data_nasc" Margin="0, 0, 0, 20" />
+
+                    <Button Text="adicionar imagem" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked_2" 
+                            BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"
+                            xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+
                 </StackLayout>
             </Frame>
 
