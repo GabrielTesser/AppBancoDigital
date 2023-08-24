@@ -25,14 +25,17 @@ namespace AppBancoDigital.View
 
             txt_correntista.Text = correntista;
 
+            Logo.Source = ImageSource.FromResource("AppBancoDigital.imagens.GT.png");
+            btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
+
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
         {
             App.Current.MainPage = new Enviar();
         }
 
-        private async void Button_Clicked_1(object sender, EventArgs e)
+        private void Button_Clicked_1(object sender, EventArgs e)
         {
             App.Current.MainPage = new Reber();
         }
@@ -40,6 +43,21 @@ namespace AppBancoDigital.View
         private void btn_config_Clicked(object sender, EventArgs e)
         {
             App.Current.MainPage = new CorrentistaEditar();
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            if (txt_saldo.BackgroundColor == Color.Transparent)
+            {
+                txt_saldo.BackgroundColor = Color.Black;
+                btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
+            }
+            else
+            {
+                txt_saldo.BackgroundColor = Color.Transparent;
+                                btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.fechado.png");
+
+            }
         }
     }
 }

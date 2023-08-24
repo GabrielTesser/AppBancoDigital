@@ -31,7 +31,8 @@
                     </Grid>
                 </StackLayout>
             </Frame>
-          
+
+            <Image x:Name="Logo" Scale="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-50,0,-150"/>
 
             <Frame HasShadow="True" Margin="10" CornerRadius="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
                 <StackLayout >
@@ -41,7 +42,8 @@
                     <Line X1="360" Stroke="black" VerticalOptions="Center" Margin="0, 15, 0, 0"/>
 
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Seu saldo é de: R$ 0,00" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Title" Margin="0, 50"/>
+                        <Label x:Name="txt_saldo" BackgroundColor="Black" Text="Seu saldo é de: R$ 0,00" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Title" Margin="0, 50"/>
+                        <ImageButton x:Name="btn_olho" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
                     </StackLayout>
 
                     <Line X1="360" Stroke="black" VerticalOptions="Center"/>

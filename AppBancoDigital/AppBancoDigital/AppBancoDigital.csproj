@@ -19,13 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="imagens\avatar.png">
+    <EmbeddedResource Include="imagens\aberto.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="imagens\aberto.png">
+    <EmbeddedResource Include="imagens\avatar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="imagens\config.png">
@@ -50,13 +47,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="View\CorrentistaEditar.xaml.cs">
+      <DependentUpon>CorrentistaEditar.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Pix\gerarqr.xaml.cs">
+      <DependentUpon>gerarqr.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Pix\scanear.xaml.cs">
+      <DependentUpon>scanear.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="View\CorrentistaAdd.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\CorrentistaEditar.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Pix\Enviar.xaml">
+    <EmbeddedResource Update="View\Pix\gerarqr.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Home.xaml">
@@ -65,10 +74,7 @@
     <EmbeddedResource Update="View\Login.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\Pix\Reber.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\Pix\Sacanear.xaml">
+    <EmbeddedResource Update="View\Pix\scanear.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

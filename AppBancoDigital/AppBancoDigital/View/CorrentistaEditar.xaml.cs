@@ -47,23 +47,5 @@ namespace AppBancoDigital.View
         {
             App.Current.MainPage = new Home();
         }
-
-        private async void Button_Clicked_2(object sender, EventArgs e)
-        {
-
-            var result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
-            {
-                Title = "Selecione uma imagem"
-            });
-
-            if (result != null)
-            {
-                
-                Avatar = true;
-                avatar.Source = ImageSource.FromFile(result.FullPath);
-                App.DadosCorrentista.SelectedImage = ImageSource.FromFile(result.FullPath);
-
-            }
-        }
     }
 }
