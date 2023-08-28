@@ -21,47 +21,76 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="265"/>
+                            <ColumnDefinition Width="160"/>
+                            <ColumnDefinition Width="180"/>
                         </Grid.ColumnDefinitions>
 
                         <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" FontAttributes="Bold" Text="Ola " TextColor="White" x:Name="txt_correntista" VerticalOptions="Center" HorizontalOptions="Center"/>
-                        <ImageButton Clicked="btn_config_Clicked" Grid.Row="0" Grid.Column="1" x:Name="btn_config" HorizontalOptions="EndAndExpand" BackgroundColor="Transparent" Scale="0.8"/>
-
                     </Grid>
                 </StackLayout>
             </Frame>
 
             <Image x:Name="Logo" Scale="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-50,0,-150"/>
 
-            <Frame HasShadow="True" Margin="10" CornerRadius="10" VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
-                <StackLayout >
+            <Frame HasShadow="True" Margin="10" CornerRadius="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
 
-                    <Label Text="Bem Vindo!" TextColor="Black" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold"/>
-                        
-                    <Line X1="360" Stroke="black" VerticalOptions="Center" Margin="0, 15, 0, 0"/>
+                <StackLayout>
+                
+                    <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                            <StackLayout Orientation="Horizontal">
 
-                    <StackLayout Orientation="Horizontal">
-                        <Label x:Name="txt_saldo" BackgroundColor="Black" Text="Seu saldo é de: R$ 0,00" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Title" Margin="0, 50"/>
-                        <ImageButton x:Name="btn_olho" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"/>
-                    </StackLayout>
+                                <Button Text="Gerar QR" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked"
+                                    BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"
+                                    xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
 
-                    <Line X1="360" Stroke="black" VerticalOptions="Center"/>
-                    
-                    <Button Text="Gerar QR" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked"
-                            BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"
-                            xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                                <Button Text="Escanear QR" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked_1"
+                                    BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent" 
+                                    xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+
+                                <Button Text="Dados do Correntista" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="btn_config_Clicked"
+                                    BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent" 
+                                    xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+
+                            </StackLayout>
+                    </ScrollView>
 
 
+                  
 
-                    <Button Text="Escanear QR" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked_1"
-                            BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent" 
-                            xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                    <Frame CornerRadius="10" HeightRequest="150" WidthRequest="100">
+                        <Frame.Background>
+                            <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                                <GradientStop Color="#3400E6" Offset="0.3" />
+                                <GradientStop Color="#FF0062" Offset="1.3" />
+                            </LinearGradientBrush>
+                        </Frame.Background>
+
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="150"/>
+                                <RowDefinition Height="150"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+
+                            <BoxView BackgroundColor="#e6a607" Grid.Column="1" Grid.Row="1" WidthRequest="4" Margin="0, 0, 10, 0" />
+
+
+                        </Grid>
+
+                    </Frame>
+
                 </StackLayout>
             </Frame>
-            
+
+       
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
