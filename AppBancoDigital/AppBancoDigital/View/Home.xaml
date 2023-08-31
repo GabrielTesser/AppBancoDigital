@@ -26,36 +26,33 @@
                         </Grid.ColumnDefinitions>
 
                         <Label Grid.Row="0" Grid.Column="0" FontSize="Medium" FontAttributes="Bold" Text="Ola " TextColor="White" x:Name="txt_correntista" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                        <StackLayout Orientation="Horizontal" Grid.Column="1">
+                            <Label x:Name="txt_saldo" BackgroundColor="#FF0062" Text="Seu saldo é de: R$ 0,00" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
+                            <ImageButton x:Name="btn_olho" BackgroundColor="Transparent" Clicked="btn_olho_Clicked" HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        
                     </Grid>
                 </StackLayout>
             </Frame>
 
             <Image x:Name="Logo" Scale="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0,-50,0,-150"/>
 
-            <Frame HasShadow="True" Margin="10" CornerRadius="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
+            <Frame HasShadow="True" Margin="0,100,0,0" CornerRadius="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
 
-                <StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand">
                 
-                    <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
-                            <StackLayout Orientation="Horizontal">
+                    
+                            <StackLayout Spacing="23" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
 
-                                <Button Text="Gerar QR" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked"
-                                    BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"
-                                    xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                                <ImageButton BackgroundColor="White" Aspect="AspectFit" Scale="1.5" Margin="30" x:Name="img_gerar" CornerRadius="10" Clicked="Button_Clicked"/>
 
-                                <Button Text="Escanear QR" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked_1"
-                                    BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent" 
-                                    xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                                <ImageButton BackgroundColor="White" Aspect="AspectFit" Scale="1.5" Margin="30" x:Name="img_scan" CornerRadius="10" Clicked="Button_Clicked_1" />
 
-                                <Button Text="Dados do Correntista" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="btn_config_Clicked"
-                                    BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent" 
-                                    xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                                <ImageButton BackgroundColor="White" Aspect="AspectFit" Scale="1.5" Margin="30" x:Name="img_config" CornerRadius="10" Clicked="btn_config_Clicked"/>
 
                             </StackLayout>
-                    </ScrollView>
+                    
 
 
                   
@@ -79,8 +76,13 @@
                                 <ColumnDefinition Width="150"/>
                             </Grid.ColumnDefinitions>
 
-                            <BoxView BackgroundColor="#e6a607" Grid.Column="1" Grid.Row="1" WidthRequest="4" Margin="0, 0, 10, 0" />
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="Nome: nome" FontSize="Subtitle" FontAttributes="Bold" TextColor="White" x:Name="txt_cartão1"/>
+                                <Label Text="0000 0000 0000 0000" TextColor="White"/>
+                            </StackLayout>
 
+
+                            <Frame HasShadow="False" BackgroundColor="#e6a607" Margin="10, 0, 10, 0" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" HeightRequest="10" WidthRequest="10"  Grid.Column="1" Grid.Row="0" Grid.RowSpan="1"/>
 
                         </Grid>
 

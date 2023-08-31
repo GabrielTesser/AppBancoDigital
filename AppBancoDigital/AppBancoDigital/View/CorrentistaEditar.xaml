@@ -25,14 +25,6 @@
             <Frame VerticalOptions="StartAndExpand" Margin="0, -300, 0, -10" CornerRadius="5" Padding="10" Scale="0.9">
                 <StackLayout>
 
-                    <Frame CornerRadius="5" BorderColor="Black" IsClippedToBounds="True">
-                        <StackLayout Orientation="Horizontal">
-                            <Label x:Name="txt_saldo" BackgroundColor="Black" Text="Seu saldo é de: R$ 0,00" TextColor="Black" HorizontalOptions="CenterAndExpand" FontSize="Title"/>
-                            <ImageButton x:Name="btn_olho" BackgroundColor="Transparent" Clicked="btn_olho_Clicked" HorizontalOptions="StartAndExpand"/>
-                        </StackLayout>
-                    </Frame>
-                   
-
                     <Label FontSize="Medium" FontAttributes="Bold" Text="Nome: " TextColor="Black" x:Name="txt_correntista" VerticalOptions="Center" HorizontalOptions="Center"/>
                     <Label FontSize="Medium" FontAttributes="Bold" Text="CPF: " TextColor="Black" x:Name="txt_cpf" VerticalOptions="Center" HorizontalOptions="Center"/>
                     <Label FontSize="Medium" FontAttributes="Bold" Text="Email: " TextColor="Black" x:Name="txt_email" VerticalOptions="Center" HorizontalOptions="Center"/>
@@ -41,6 +33,13 @@
                             BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"
                             xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                             xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+
+                    <Button Text="logout" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked_2" 
+                            BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"
+                            xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+
+
                 </StackLayout>
             </Frame>
             

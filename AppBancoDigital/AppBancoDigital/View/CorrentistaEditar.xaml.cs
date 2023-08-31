@@ -38,7 +38,6 @@ namespace AppBancoDigital.View
             txt_cpf.Text = cpf;
             txt_email.Text = email;
 
-            btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.fechado.png");
 
         }
 
@@ -47,20 +46,7 @@ namespace AppBancoDigital.View
             App.Current.MainPage = new Home();
         }
 
-        private void btn_olho_Clicked(object sender, EventArgs e)
-        {
-            if (txt_saldo.BackgroundColor == Color.Transparent)
-            {
-                txt_saldo.BackgroundColor = Color.Black;
-                btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
-            }
-            else
-            {
-                txt_saldo.BackgroundColor = Color.Transparent;
-                btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.fechado.png");
-
-            }
-        }
+        
 
         private async void Button_Clicked_1(object sender, EventArgs e)
         {
@@ -87,6 +73,13 @@ namespace AppBancoDigital.View
                 Console.WriteLine(ex.StackTrace);
                 await DisplayAlert("Ops!", ex.Message, "OK");
             }
+        }
+
+        private void Button_Clicked_2(object sender, EventArgs e)
+        {
+            App.DadosCorrentista = null;
+
+            App.Current.MainPage = new Login();
         }
     }
 }

@@ -16,6 +16,8 @@
     <None Remove="imagens\config.png" />
     <None Remove="imagens\fechado.png" />
     <None Remove="imagens\GT.png" />
+    <None Remove="imagens\qr.png" />
+    <None Remove="imagens\scan.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,6 +34,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="imagens\GT.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imagens\qr.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imagens\scan.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

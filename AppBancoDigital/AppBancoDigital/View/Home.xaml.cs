@@ -21,10 +21,16 @@ namespace AppBancoDigital.View
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             string correntista = "Ola " + App.DadosCorrentista.Nome  + "!";
+            string cartao = "Nome: " + App.DadosCorrentista.Nome;
 
             txt_correntista.Text = correntista;
+            txt_cartão1.Text = cartao;
 
             Logo.Source = ImageSource.FromResource("AppBancoDigital.imagens.GT.png");
+            img_gerar.Source = ImageSource.FromResource("AppBancoDigital.imagens.qr.png");
+            img_scan.Source = ImageSource.FromResource("AppBancoDigital.imagens.scan.png");
+            img_config.Source = ImageSource.FromResource("AppBancoDigital.imagens.config.png");
+            btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.fechado.png");
 
         }
 
@@ -43,6 +49,19 @@ namespace AppBancoDigital.View
             App.Current.MainPage = new CorrentistaEditar();
         }
 
-        
+        private void btn_olho_Clicked(object sender, EventArgs e)
+        {
+            if (txt_saldo.BackgroundColor == Color.Transparent)
+            {
+                txt_saldo.BackgroundColor = Color.Black;
+                btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
+            }
+            else
+            {
+                txt_saldo.BackgroundColor = Color.Transparent;
+                btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.fechado.png");
+
+            }
+        }
     }
 }
