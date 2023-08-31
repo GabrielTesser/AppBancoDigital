@@ -54,6 +54,7 @@ namespace AppBancoDigital.View
             if (txt_saldo.BackgroundColor == Color.Transparent)
             {
                 txt_saldo.BackgroundColor = Color.Black;
+
                 btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
             }
             else
