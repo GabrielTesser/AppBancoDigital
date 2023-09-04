@@ -51,15 +51,14 @@ namespace AppBancoDigital.View
 
         private void btn_olho_Clicked(object sender, EventArgs e)
         {
-            if (txt_saldo.BackgroundColor == Color.Transparent)
+            if (txt_saldo.TextColor == Color.FromHex("#FF0062"))
             {
-                txt_saldo.BackgroundColor = Color.Black;
-
+                txt_saldo.TextColor = Color.White;
                 btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
             }
             else
             {
-                txt_saldo.BackgroundColor = Color.Transparent;
+                txt_saldo.TextColor = Color.FromHex("#FF0062");
                 btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.fechado.png");
 
             }

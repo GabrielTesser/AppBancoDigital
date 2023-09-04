@@ -24,6 +24,9 @@ namespace AppBancoDigital.View
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.aberto.png");
+            dtpck_data_nasc.MaximumDate = DateTime.Now.AddYears(-16);
+
+
 
             if (Avatar == false)
             {

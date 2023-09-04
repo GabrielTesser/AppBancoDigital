@@ -15,4 +15,22 @@
          which is used to tint widgets -->
     <item name="colorAccent">#000</item>
   </style>
+
+
+  <style name="DatePickerStyle" parent="ThemeOverlay.AppCompat.Dialog">
+		  <!--header background-->
+		  <item name="colorAccent">#FF0062</item>
+		  <!--header textcolor-->
+		  <item name="android:textColorPrimaryInverse">#fff</item>
+		  <!--body background-->
+		  <item name="android:windowBackground">#eee</item>
+		  <!--selected day-->
+		  <item name="android:colorControlActivated">#D3D3D3</item>
+		  <!--days of the month-->
+		  <item name="android:textColorPrimary">#3400E6</item>
+		  <!--days of the week-->
+		  <item name="android:textColorSecondary">#3400E6</item>
+		  <!--cancel&ok-->
+		  <item name="android:textColor">#3400E6</item>
+	  </style>
 </resources>
