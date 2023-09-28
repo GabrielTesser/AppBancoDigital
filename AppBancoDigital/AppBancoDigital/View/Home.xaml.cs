@@ -22,9 +22,11 @@ namespace AppBancoDigital.View
             NavigationPage.SetHasNavigationBar(this, false);
             string correntista = "Ola " + App.DadosCorrentista.Nome  + "!";
             string cartao = "Nome: " + App.DadosCorrentista.Nome;
+            string saldo = "Seu saldo é de: R" + App.DadosConta.Saldo.ToString("C");
 
             txt_correntista.Text = correntista;
             txt_cartão1.Text = cartao;
+            txt_saldo.Text = saldo;
 
             Logo.Source = ImageSource.FromResource("AppBancoDigital.imagens.GT.png");
             img_gerar.Source = ImageSource.FromResource("AppBancoDigital.imagens.qr.png");

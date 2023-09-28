@@ -31,12 +31,14 @@ namespace AppBancoDigital.View
                 
             }
             string correntista = "Nome: " + App.DadosCorrentista.Nome;
-            string cpf = "Nome: " + App.DadosCorrentista.Cpf;
-            string email = "Nome: " + App.DadosCorrentista.Email;
+            string cpf = "CPF: " + App.DadosCorrentista.Cpf;
+            string email = "Email: " + App.DadosCorrentista.Email;
+            string data = "Data de Arbertura: " + App.DadosConta.Data_Abertura.ToString("dd/MM/yyyy");
 
             txt_correntista.Text = correntista;
             txt_cpf.Text = cpf;
             txt_email.Text = email;
+            txt_data.Text = data;
 
 
         }

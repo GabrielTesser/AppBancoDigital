@@ -28,6 +28,7 @@
                     <Label FontSize="Medium" FontAttributes="Bold" Text="Nome: " TextColor="Black" x:Name="txt_correntista" VerticalOptions="Center" HorizontalOptions="Center"/>
                     <Label FontSize="Medium" FontAttributes="Bold" Text="CPF: " TextColor="Black" x:Name="txt_cpf" VerticalOptions="Center" HorizontalOptions="Center"/>
                     <Label FontSize="Medium" FontAttributes="Bold" Text="Email: " TextColor="Black" x:Name="txt_email" VerticalOptions="Center" HorizontalOptions="Center"/>
+                    <Label FontSize="Medium" FontAttributes="Bold" Text="Data de Criação: " TextColor="Black" x:Name="txt_data" VerticalOptions="Center" HorizontalOptions="Center"/>
 
                     <Button Text="editar imagem" CornerRadius="10" Margin="0, 15, 0, 15" Clicked="Button_Clicked_1" 
                             BorderWidth="3" BorderColor="Black" TextColor="Black" BackgroundColor="Transparent"
