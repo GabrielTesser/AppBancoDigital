@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppBancoDigital.View.Pix;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -33,6 +34,7 @@ namespace AppBancoDigital.View
             img_scan.Source = ImageSource.FromResource("AppBancoDigital.imagens.scan.png");
             img_config.Source = ImageSource.FromResource("AppBancoDigital.imagens.config.png");
             btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.fechado.png");
+            img_pix.Source = ImageSource.FromResource("AppBancoDigital.imagens.pix.png");
 
         }
 
@@ -64,6 +66,11 @@ namespace AppBancoDigital.View
                 btn_olho.Source = ImageSource.FromResource("AppBancoDigital.imagens.fechado.png");
 
             }
+        }
+
+        private void img_pix_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new AreaPix();
         }
     }
 }

@@ -45,18 +45,22 @@
             <Frame HasShadow="True" Margin="0,100,0,0" CornerRadius="10" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand">
 
                 <StackLayout VerticalOptions="CenterAndExpand">
-                
-                    
-                            <StackLayout Spacing="23" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
 
-                                <ImageButton BackgroundColor="White" Aspect="AspectFit" Scale="1.5" Margin="15, 0, 45, 0" x:Name="img_gerar" CornerRadius="10" Clicked="Button_Clicked"/>
 
-                                <ImageButton BackgroundColor="White" Aspect="AspectFit" Scale="1.5" Margin="40, 30, 30, 30" x:Name="img_scan" CornerRadius="10" Clicked="Button_Clicked_1" />
+                    <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                        <StackLayout Spacing="23"  VerticalOptions="CenterAndExpand" Orientation="Horizontal">
 
-                                <ImageButton BackgroundColor="White" Aspect="AspectFit" Scale="1.5" Margin="50, 0, 0, 0" x:Name="img_config" CornerRadius="10" Clicked="btn_config_Clicked"/>
+                            <ImageButton Margin="20" BackgroundColor="White" Aspect="AspectFit" Scale="1.5" x:Name="img_pix" CornerRadius="10" Clicked="img_pix_Clicked"/>
 
-                            </StackLayout>
-                    
+                            <ImageButton Margin="20" BackgroundColor="White" Aspect="AspectFit" Scale="1.5" x:Name="img_gerar" CornerRadius="10" Clicked="Button_Clicked"/>
+
+                            <ImageButton Margin="20" BackgroundColor="White" Aspect="AspectFit" Scale="1.5" x:Name="img_scan" CornerRadius="10" Clicked="Button_Clicked_1" />
+
+                            <ImageButton Margin="20" BackgroundColor="White" Aspect="AspectFit" Scale="1.5" x:Name="img_config" CornerRadius="10" Clicked="btn_config_Clicked"/>
+
+                        </StackLayout>
+                    </ScrollView>
+                           
 
 
                   

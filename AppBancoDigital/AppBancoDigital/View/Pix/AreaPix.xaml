@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.Pix.AreaPix">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+            <GradientStop Color="#3400E6" Offset="0.3" />
+            <GradientStop Color="#FF0062" Offset="1.3" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame Margin="20" VerticalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Label Margin="10" Text="Area Pix" TextColor="Black" FontSize="Title" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"/>
+
+                    <Label Margin="10" x:Name="txt_chave" TextColor="Black" Text="sua chave é: " />
+
+                    <Button x:Name="btn_criar" Text="Criar Chave" CornerRadius="20" Clicked="btn_criar_Clicked"/>
+                    <Button Text="Editar Chave" CornerRadius="20"/>
+
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

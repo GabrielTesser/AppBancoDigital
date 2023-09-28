@@ -9,6 +9,7 @@ namespace AppBancoDigital
     {
         public static Correntista DadosCorrentista { get; set; } = new Correntista();
         public static Conta DadosConta { get; set; } = new Conta();
+        public static ChavePix DadosChavePix { get; set; } = new ChavePix();
 
 
         public App()
