@@ -14,6 +14,7 @@
     <None Remove="imagens\aberto.png" />
     <None Remove="imagens\avatar.png" />
     <None Remove="imagens\config.png" />
+    <None Remove="imagens\copiar.png" />
     <None Remove="imagens\fechado.png" />
     <None Remove="imagens\GT.png" />
     <None Remove="imagens\pix.png" />
@@ -29,6 +30,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="imagens\config.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imagens\copiar.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="imagens\fechado.png">

@@ -20,9 +20,9 @@
 
                     <StackLayout Orientation="Horizontal">
 
-                        <Label Margin="10" x:Name="txt_tipo" TextColor="Black" Text="sua chave é do tipo: "/>
+                        <Label Margin="10" x:Name="txt_tipo" TextColor="Black" FontSize="Title" HorizontalOptions="CenterAndExpand" Text="sua chave é do tipo: "/>
 
-                        <Button x:Name="btn_copiar" Text="❏" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand" FontSize="Title" TextColor="Black" Clicked="Button_Clicked"/>
+                        <ImageButton x:Name="btn_copiar" BackgroundColor="Transparent" HorizontalOptions="CenterAndExpand" Clicked="Button_Clicked"/>
                     </StackLayout>
 
                     <Button BackgroundColor="White" BorderColor="Black" BorderWidth="3" x:Name="btn_criar" Text="Criar Chave" CornerRadius="20" Clicked="btn_criar_Clicked"/>

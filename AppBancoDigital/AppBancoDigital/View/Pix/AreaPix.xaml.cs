@@ -18,6 +18,8 @@ namespace AppBancoDigital.View.Pix
         {
             InitializeComponent();
 
+            btn_copiar.Source = ImageSource.FromResource("AppBancoDigital.imagens.copiar.png");
+
             if (App.DadosChavePix.Chave == null)
             {
                 txt_chave.Text = "Você ainda não possui chave pix";
@@ -28,6 +30,7 @@ namespace AppBancoDigital.View.Pix
             else
             {
                 txt_chave.Text = App.DadosChavePix.Chave.ToString();
+                txt_tipo.Text = "Tipo: " + App.DadosChavePix.Tipo.ToString();
                 btn_criar.Text = "Alterar Chave Pix";
             }
         }
